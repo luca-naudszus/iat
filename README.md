@@ -1,2 +1,2 @@
 # iat
-Analyze Implicit Association Test results
+Analyzing Implicit Association Test results
