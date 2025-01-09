@@ -21,4 +21,7 @@ The output is a table containing d-scores for all participants (as well as d-sco
 
 `shr.R` takes the output of `iat.R` as an input and returns the split-half reliability, corrected with the Spearman-Brown-Formula. 
 
+# Citation
+When using this work, please cite Naudszus, Altmann, & Roth (2024). Relationships between self-esteem-related dream content and explicit and implicit self-esteem. Acta Psychologica, 251, 104582. https://doi.org/10.1016/j.actpsy.2024.104582
+
 
