@@ -17,7 +17,7 @@ The function expects at least four columns: subject, blockcode, latency, and cor
 * `correct` is a boolean describing whether the response was correct. 
 The output is a table containing d-scores for all participants (as well as d-scores from an odd-even split used below). 
 
-`improved_scoring_algorithm.R` is a helper function. 
+`improved_scoring_algorithm.R` is a helper function and is necessary for `iat.R`. 
 
 `shr.R` takes the output of `iat.R` as an input and returns the split-half reliability, corrected with the Spearman-Brown-Formula. 
 
