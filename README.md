@@ -13,11 +13,11 @@ This repository implements the Improved Scoring Algorithm (Greenwald et al., 200
 - **Input**: A data frame containing trial-level data from all participants, where each row represents a single trial.  
   - **Required columns**:  
     - `subject`: Participant IDs.  
-    - `blockcode`: Specifies the block each trial belongs to, expected to be one of four types:  
+    - `blockcode`: Specifies the block each trial belongs to. The four main IAT blocks are expected to be called:  
       - `compatibletest1`  
       - `compatibletest2`  
       - `incompatibletest1`  
-      - `incompatibletest2`  
+      - `incompatibletest2` 
     - `latency`: Reaction times in milliseconds.  
     - `correct`: Boolean indicating whether the response was correct.  
 - **Output**: A table containing:  
