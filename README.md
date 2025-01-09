@@ -8,6 +8,7 @@ This repository implements the Improved Scoring Algorithm for evaluation of Impl
 
 # Usage
 It contains three functions: `iat.R`, `improved_scoring_algorithm.R`, `shr.R`.
+
 `iat.R` takes a data frame with all trials from all participants as an input. Each trial is in one row. 
 The function expects at least four columns: subject, blockcode, latency, and correct. 
 * `subject` contains the participants' ids. 
