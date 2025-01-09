@@ -1,16 +1,21 @@
-# We construct a new data frame from each participant's raw data in order to
-# have them in one single format containing all information that we need and not
-# more. Then, we calculate the d-scores using the Improved Scoring Algorithm as
-# specified above. 
-# We also do this on an odd-even split data set to later obtain a split-half
-# reliability estimate. 
-# We merge all trials and all valid trials together in a single large data frame 
-# in case we want to do some further statistics on them. 
+#' iat
+#'
+#' This function processes iat test results and returns d-scores.
+#'
+#' @param df A data frame containing all trials for all participants. Must include:
+#'   - `subject`: Alphanumeric column, participant ID, non-empty. 
+#'   - `blockcode`: Factor column with levels "compatibletest1", "compatibletest2", "incompatibletest1", "incompatibletest2"
+#'   - `latency`: Character column, non-empty strings.
+#'   - `correct`: Boolean column, indicates whether response was correct. 
+#' @return A data frame containing iat values for all participants. Includes an odd-even split for calculation of split-half reliability.
+# ---------------------------------------------------------
 
+source('improved_scoring_algorithm.R')
 iat <- function(df){
   
-  df.allvalid <- NULL
-  block_names <- c("compatibletest1", "compatibletest2", "incompatibletest1", "incompatibletest2")
+  df.valid <- NULL
+  block_names <- c("compatibletest1", "compatibletest2", 
+                   "incompatibletest1", "incompatibletest2")
 
   df.iat <- data.frame(matrix(ncol = 4, nrow = 0))
   colnames(df.iat) <- c("id", "dscore", "dscore.odd", "dscore.even")
@@ -64,7 +69,8 @@ iat <- function(df){
     df.iat <- rbind(df.iat, new_row)
   
   # bind data from all valid trials in one data frame
-  df.allvalid <- rbind(df.allvalid, df.current)
+  df.valid <- rbind(df.valid, df.current)
   
-  return(df.allvalid, df.iat)
+  return(df.valid, df.iat)
+  }
 }

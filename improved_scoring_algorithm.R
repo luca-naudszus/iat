@@ -1,6 +1,14 @@
-# this is the implementation of the improved scoring algorithm (Greenwald et
-# al., 2003), adapted for a single-attribute IAT as described by Penke et al. 
-# (2006)
+#' improved_scoring_algorithm
+#'
+#' This function implements the Improved Scoring Algorithm (Greenwald et al., 2003)
+#'
+#' @param df A data frame containing valid trials for one participant. Must include:
+#'   - `subject`: Alphanumeric column, participant ID, non-empty. 
+#'   - `blockcode`: Factor column with levels "compatibletest1", "compatibletest2", "incompatibletest1", "incompatibletest2"
+#'   - `latency`: Character column, non-empty strings.
+#'   - `correct`: Boolean column, indicates whether response was correct. 
+#' @return a numeric value, the d-score for this participant
+# ---------------------------------------------------------
 
 improved_scoring_algorithm <- function(df){
   # (a) initialize vector with block means
