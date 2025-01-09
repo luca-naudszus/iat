@@ -1,5 +1,5 @@
-# Analysis of IAT results using the Improved Scoring Algorithm (Greenwald et al., 2003)
-This repository implements the Improved Scoring Algorithm for evaluation of Implicit Association Test results. Split-half reliability assessment is also contained. 
+# Analysis of IAT results using the Improved Scoring Algorithm 
+This repository implements the Improved Scoring Algorithm (Greenwald et al., 2003) for evaluation of Implicit Association Test results. Split-half reliability assessment is also contained. 
 
 ## Required dependencies
 * tidyverse
