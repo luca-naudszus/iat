@@ -1,15 +1,8 @@
-# iat
+# Analysis of IAT results using the Improved Scoring Algorithm (Greenwald et al., 2003)
+This repository implements the Improved Scoring Algorithm for evaluation of Implicit Association Test results. Split-half reliability assessment is also contained. 
 
-## Analysis of IAT results using the Improved Scoring Algorithm (Greenwald et al., 2003)
-This repository implements the Improved Scoring Algorithm for evaluation of Implicit Association Test results. 
-
-# Required dependencies
+## Required dependencies
 * tidyverse
-
-# Usage
-# Implicit Association Test (IAT) Analysis Repository  
-
-This repository contains three R functions designed for analysing and scoring Implicit Association Test (IAT) data, as well as assessing reliability.  
 
 ## Functions  
 
@@ -46,7 +39,7 @@ This repository contains three R functions designed for analysing and scoring Im
 ## Overview  
 This repository facilitates efficient computation of IAT d-scores and reliability analysis for robust psychometric evaluation.  
 
-# Citation
+## Citation
 When using this work, please cite Naudszus, Altmann, & Roth (2024). Relationships between self-esteem-related dream content and explicit and implicit self-esteem. Acta Psychologica, 251, 104582. https://doi.org/10.1016/j.actpsy.2024.104582
 
 
